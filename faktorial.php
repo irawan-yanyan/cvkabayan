@@ -2,7 +2,7 @@
  class faktorial{
   function countFaktorial($bilangan){
 	   if($bilangan>=1){
-  			echo "Angka Faktorial :\n";
+  			echo "==List angka faktorial==\n";
   				for($i=1; $i <= $bilangan; $i++){
 					     $faktorial = 1; 
 					     echo $i. "! = ";
@@ -11,7 +11,8 @@
 							            echo " 1 = " .$faktorial;
         						}else{  
 						      			echo $j ." x ";     
-						      	}       
+							}       
+							        // untuk menghitung faktorial
 						         	$faktorial*=$j; 
      						     }echo "\n";
   				}
@@ -26,7 +27,8 @@
    }
 }
 
-	$nilai = readline("angka yang di masukan : ");
+        $nilai = readline("angka yang di masukan : ");
+ 	// validasi input angka
 	if(is_numeric($nilai)){
 		// set object faktorial
 		$objFaktorial = new faktorial();
