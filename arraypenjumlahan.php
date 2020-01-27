@@ -1,23 +1,35 @@
 <?php
-	function penjumlahan_tiga_angka_nol($nilai){	
-		// inisialisai
-		$jumlaharray = count($nilai) - 2;
-		$hasil=[];
-		for ($x = 0; $x < $jumlaharray; $x++) {
-				     // validasi utk penjumlahan angka sama dengan nol
-				    if ($nilai[$x] + $nilai[$x+1] + $nilai[$x+2] == 0){
-				        array_push($hasil, "{$nilai[$x]} + {$nilai[$x+1]} + {$nilai[$x+2]} = 0");
-				    }
-		}
-		// kondisi jika penjumlahan tidak ada yang nol
-		if(empty($hasil)){
-			 	print_r($nilai);
-			        echo " Penjumlahan hasil nol dari 3 ( tiga ) angka dalam nilaiay tidak ditemukan."; 
-				exit();
-		}
-		return $hasil;
-	}
-	       $angkainput = array(-1,0,1,2,-1,-4);
-               print_r(penjumlahan_tiga_angka_nol($angkainput));
+
+	function cariAngkaTigaJumlahNol($arr, $n){	 
+    			$data_ditemukan = true; 
+			    for ($i = 0; $i < $n - 2; $i++){ 
+			        for ($j = $i + 1; $j < $n - 1; $j++){ 
+					for ($k = $j + 1; $k < $n; $k++){
+					// kondisi jika 3 angka ditemukan dengan jumlah samadengan nol	
+			                if ($arr[$i] + $arr[$j] + $arr[$k] == 0) {
+		    		//		sort($arr);	
+						       echo "[";
+						       echo $arr[$i] , ", ", 
+			                                $arr[$j] , ", ", 
+			                                $arr[$k] ,"] \n"; 
+				                       $data_ditemukan = true; 
+                			} 
+            				} 
+        			} 
+    			    } 
+     
+    // validasi jika data tidak ditemukan 
+    if ($data_ditemukan == false) 
+        echo " data 3 angka tidak ditemukan  ", "\n"; 
+  
+} 
+        		//$angkainput = array(-1,0,1,2,-1,-4);
+	      $angkainput = array(2,1,5,7,4,-8,-3,-1);
+	  		 // $angkainput  = array(0, -1, 2, -3, 1);
+	      echo " == angka array yang di input == \n";
+	      print_r($angkainput);
+	      $jumlah_array = sizeof($angkainput);
+	       echo " == hasil 3 angka array yang di dapat untuk penjumlahan nol == \n";
+               cariAngkaTigaJumlahNol($angkainput,$jumlah_array);
 
 ?>
