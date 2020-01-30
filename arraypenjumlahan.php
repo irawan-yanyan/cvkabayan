@@ -7,30 +7,30 @@
 					for ($k = $j + 1; $k < $n; $k++){
 					// kondisi jika 3 angka ditemukan dengan jumlah samadengan nol	
 			                if ($arr[$i] + $arr[$j] + $arr[$k] == 0) {
-		    		//		sort($arr);	
-						       echo "[";
-						       echo $arr[$i] , ", ", 
-			                                $arr[$j] , ", ", 
-			                                $arr[$k] ,"] \n"; 
 						       $data_ditemukan = true; 
-				//		$tampung = array($arr[$i],$arr[$j],$arr[$k]);
+						       $tampung = $arr[$i].",".$arr[$j].",".$arr[$k];
+						       $arr_tampung = explode(",",$tampung);
+						       sort($arr_tampung);
+						       echo "[".implode(",",$arr_tampung)."] -> ".implode("+",$arr_tampung)." = 0 \n";
+						       
                 			  } 
             				} 
         			} 
     			    } 
      
-    // validasi jika data tidak ditemukan 
-    if ($data_ditemukan == false) 
-        echo " data 3 angka tidak ditemukan  ", "\n"; 
-  
-} 
-        		//$angkainput = array(-1,0,1,2,-1,-4);
+    				// validasi jika data tidak ditemukan 
+    				if ($data_ditemukan == false) 
+        				echo " data 3 angka tidak ditemukan  ", "\n"; 
+       			        }	 
+              
+             // $angkainput = array(-1,0,1,2,-1,-4);
 	      $angkainput = array(2,1,5,7,4,-8,-3,-1);
-	  		 // $angkainput  = array(0, -1, 2, -3, 1);
-	      echo " == angka array yang di input == \n";
+	     // $angkainput  = array(0, -1, 2, -3, 1);
+
+              echo " == angka array yang di input == \n";
 	      print_r($angkainput);
 	      $jumlah_array = sizeof($angkainput);
-	       echo " == hasil 3 angka array yang di dapat untuk penjumlahan nol == \n";
-               cariAngkaTigaJumlahNol($angkainput,$jumlah_array);
+	      echo " == hasil 3 elemen array yang di dapat untuk penjumlahan nol == \n";
+              cariAngkaTigaJumlahNol($angkainput,$jumlah_array);
 
 ?>
