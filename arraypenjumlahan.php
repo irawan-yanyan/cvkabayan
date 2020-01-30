@@ -12,8 +12,9 @@
 						       echo $arr[$i] , ", ", 
 			                                $arr[$j] , ", ", 
 			                                $arr[$k] ,"] \n"; 
-				                       $data_ditemukan = true; 
-                			} 
+						       $data_ditemukan = true; 
+				//		$tampung = array($arr[$i],$arr[$j],$arr[$k]);
+                			  } 
             				} 
         			} 
     			    } 
