@@ -8,9 +8,10 @@
 	}
 
 
-
-	echo "* Deret Fibonacci Multiply by 2*   \n";
-	echo "=============================== \n";
+	echo "\n** Mohon :-) , utk eksekusi program melalui TERMINAL / CONSOLE ( php kaliduafibonacci.php ) **\n";
+	echo "===============================\n";
+	echo "  Deret Fibonacci Multiply by 2\n";
+	echo "===============================\n";
 	echo implode(" ",fibKaliDua(14));
 	echo "\n============================== \n";
 	$jumlah_deret = readline(" Masukan angka deret : ");
@@ -19,4 +20,5 @@
 	}else{
 		echo " Maaf angka yang anda masukan salah.";
 	}
+	echo "\n";
 ?>

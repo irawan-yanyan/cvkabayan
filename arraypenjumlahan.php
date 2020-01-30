@@ -23,11 +23,14 @@
         				echo " data 3 angka tidak ditemukan  ", "\n"; 
        			        }	 
               
+		/* Main Program */
+
              // $angkainput = array(-1,0,1,2,-1,-4);
 	      $angkainput = array(2,1,5,7,4,-8,-3,-1);
 	     // $angkainput  = array(0, -1, 2, -3, 1);
 
-              echo " == angka array yang di input == \n";
+	      echo "\n** Mohon :-) , utk eksekusi program melalui TERMINAL / CONSOLE  ( php arraypenjumlahan.php ) **\n";
+              echo "Angka array yang di input : \n";
 	      print_r($angkainput);
 	      $jumlah_array = sizeof($angkainput);
 	      echo " == hasil 3 elemen array yang di dapat untuk penjumlahan nol == \n";

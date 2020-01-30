@@ -22,11 +22,12 @@
 		  // validasi jika yang angka yang dimasukan < nol
 		  echo "Maaf, Anda memasukkan bilangan < 0 .";
 	}
-	     echo "angka faktorial dari : ".$bilangan." adalah : ".$faktorial ;
+	     echo "angka faktorial dari : ".$bilangan." adalah : ".$faktorial."\n";
 	     
    }
 }
 
+	echo "\n** Mohon :-) , utk eksekusi program melalui TERMINAL / CONSOLE ( php faktorial.php ) **\n ";
         $nilai = readline("angka yang di masukan : ");
  	// validasi input angka
 	if(is_numeric($nilai)){

@@ -9,7 +9,7 @@
                 return $result;
         }
      
-  
+ 	echo "\n** Mohon :-) , utk eksekusi program melalu terminal / console ( php panjangruasgaris.php ) **\n"; 
         $coord =array(array(1,1), array(6,4));
         print_r(countLengthC($coord));
 
