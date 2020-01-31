@@ -26,7 +26,7 @@
 		/* Main Program */
 
              // $angkainput = array(-1,0,1,2,-1,-4);
-	      $angkainput = array(2,1,5,7,4,-8,-3,-1);
+	       $angkainput = array(2,1,5,7,4,-8,-3,-1);
 	     // $angkainput  = array(0, -1, 2, -3, 1);
 
 	      echo "\n** Mohon :-) , utk eksekusi program melalui TERMINAL / CONSOLE  ( php arraypenjumlahan.php ) **\n";
