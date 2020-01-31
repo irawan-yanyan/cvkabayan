@@ -5,7 +5,6 @@
 	}
 
       function countLengthC ($xa1,$xa2,$xb1,$xb2){  
-	       $panjang_c = 0;
 	       $tampung_garis_A = array(); 
 	       $tampung_garis_B = array();    
 	       /* validasi input X */
@@ -36,10 +35,15 @@
 	}	
      	echo "Deret Angka untuk ruas garis A = ( ".implode(" ",$tampung_garis_A).")\n";	
 	echo "Deret Angka untuk ruas garis B = ( ".implode(" ",$tampung_garis_B).")\n";	
-	echo "Maka ruas garis yang berhimpit adalah : ";
+	echo "Maka JUMLAH HASIL ruas garis yang berhimpit adalah : ";
         $garis_x_merge = array_merge($tampung_garis_A,$tampung_garis_B);
 	$hasil = array_filter(array_count_values($garis_x_merge),"cariDuplikat");
-	echo count($hasil)-1;
+	$jumlah_hasil = count($hasil)-1;
+	if($jumlah_hasil < 0){
+		echo "Ruas garis tidak berhimpit";
+	}else{
+		echo $jumlah_hasil;
+	}
 	echo "\n";
 	}
 
@@ -52,5 +56,6 @@
 	 print_r(countLengthC(5,7,0,11));
 	 print_r(countLengthC(2,8,2,10));
 	 print_r(countLengthC(1,5,5,10));
-
+	 // contoh inputan ruas garis tidak berimpit
+	 print_r(countLengthC(1,5,6,10));
 ?>
